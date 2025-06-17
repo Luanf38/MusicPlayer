@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -56,8 +57,14 @@ fun Greeting(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        ElevatedButton(onClick = onClick) {
-            Text("Reproduzir")
+        Row {
+            ElevatedButton(onClick = onClick) {
+                Text("Reproduzir")
+            }
+
+            ElevatedButton(onClick = onClick) {
+                Text("Pausar")
+            }
         }
     }
 }
